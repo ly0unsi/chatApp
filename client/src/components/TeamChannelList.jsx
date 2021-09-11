@@ -23,7 +23,7 @@ const TeamChannelList = ({children,error=false,loading,type}) => {
     return (
         <div className="team-channel-list">
                 <p className="team-channel-list__header">
-                    <p className="team-channel-list__header_title">
+                    <p className="team-channel-list__header__title">
                     {type==='team' ? 'Channels' : 'Direct messages'} 
                     </p>{/*bittun addd channel */}
                     {children}

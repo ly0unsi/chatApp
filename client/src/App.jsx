@@ -10,7 +10,7 @@ function App() {
   const authToken=cookies.get("token")
   if (authToken) {
     client.connectUser({
-      name:cookies.get('userName'),
+      name:cookies.get('username'),
       fullname:cookies.get('fullname'),
       id:cookies.get('userId'),
       phoneNumber:cookies.get('phoneNumber'),
