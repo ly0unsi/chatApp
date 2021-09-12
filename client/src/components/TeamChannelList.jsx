@@ -1,6 +1,6 @@
 import React from 'react'
 import { AddChannel } from '../assets'
-const TeamChannelList = ({children,error=false,loading,type}) => {
+const TeamChannelList = ({children,error=false,loading,type,isCreating,setIsCreating,setcreateType,setIsEditing}) => {
     if (error) {
         return type==='team' ? (
             <div className="team-channel-list">
@@ -25,7 +25,15 @@ const TeamChannelList = ({children,error=false,loading,type}) => {
                 <p className="team-channel-list__header">
                     <p className="team-channel-list__header__title">
                     {type==='team' ? 'Channels' : 'Direct messages'} 
-                    </p>{/*bittun addd channel */}
+                    </p>
+                    <AddChannel 
+                        isCreating={isCreating}
+                        setIsCreating={setIsCreating}
+                        setcreateType={setcreateType}
+                        setIsEditing={setIsEditing}
+                        type={type==="team" ? "team" :'messaging'}
+                     />
+                
                     {children}
                 </p>
             </div>
