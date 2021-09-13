@@ -45,8 +45,9 @@ const CreateChannel = ({createType,setIsCreating}) => {
            <div className="create-channel__header">
                <p>
                    {createType==="team" ? "Create a new channel" :'Send a diect message'}
+                </p>
                    <CloseCreateChannel setIsCreating={setIsCreating} />
-               </p>
+              
            </div>
            {createType==='team'&&<ChannelNameInput channelName={channelName} setChannelName={setChannelName}/>}
            <UserList setSelectedUsers={setSelectedUsers}/>

@@ -65,6 +65,7 @@ const UserList = ({ setSelectedUsers }) => {
                    
                 } else {
                     setListEmpty(true);
+                    setLoading(false);
                 }
             } catch (error) {
                setError(true);

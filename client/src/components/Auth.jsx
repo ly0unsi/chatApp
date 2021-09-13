@@ -28,7 +28,7 @@ const Auth = () => {
     const handleSubmit= async(e)=>{
         e.preventDefault()
         const{fullName,username,password,phoneNumber,avatarURL}=form
-        const URL ='http://localhost:5000/auth'
+        const URL ='https://chatapbackend.herokuapp.com/auth'
         const {data:{token,userId,hashedPassword}} =await axios.post(`${URL}/${isSignup? 'signup':'login'}`,
         {
             fullName,username,password,phoneNumber,avatarURL

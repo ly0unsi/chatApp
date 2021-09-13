@@ -52,7 +52,7 @@ const ChannelListContent = ({isCreating,setIsCreating,setcreateType,setIsEditing
             <SideBar logout={logout}/>
             <div className="channel-list__list__wrapper">
                 <CompanyHeader/>
-                <ChannelSearch/>
+                <ChannelSearch setToggleContainer={setToggleContainer}/>
                 {/* Teem channel list */}
                 <ChannelList 
                     filters={filters}
