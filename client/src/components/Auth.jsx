@@ -35,10 +35,10 @@ const Auth = () => {
         })
         cookies.set('token',token)
         cookies.set('username',username)
-        cookies.set('fullname',fullName)
+        cookies.set('fullName',fullName)
         cookies.set('userId',userId)
         if (isSignup) {
-            cookies.set('phoenNumber',phoneNumber)
+            cookies.set('phoneNumber',phoneNumber)
             cookies.set('avatarUrl',avatarURL)
             cookies.set('hashedPassword',hashedPassword)
         }

@@ -1,11 +1,14 @@
 import React ,{useState} from 'react'
-import {ChannelList,useChatContext} from 'stream-chat-react'
+import {ChannelList,useChatContext,Avatar} from 'stream-chat-react'
 import {ChannelSearch,TeamChannelList,TeamChannelPreview} from './'
 import HospitalIcon from "../assets/hospital.png"
 import LogoutIcon from "../assets/logout.png"
 import Cookies from 'universal-cookie'
 const cookies=new Cookies()
 const SideBar=({logout})=>{
+    const { client } = useChatContext();
+    const user=client.user
+    
     return(
         <div className="channel-list__sidebar">
             <div className="channel-list__sidebar__icon1">
@@ -18,6 +21,13 @@ const SideBar=({logout})=>{
                     <img onClick={logout} src={LogoutIcon} alt="Logout" width="30" />
                 </div>
             </div>
+            <div className="channel-list__sidebar__icon1" >
+                <div className="user-item__name-wrapper">
+                    <Avatar image={user.image} name={user.name || user.id} size={45} />
+                </div>
+            </div>
+           
+            
         </div>
     )
 }

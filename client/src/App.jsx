@@ -13,7 +13,7 @@ function App() {
   if (authToken) {
     client.connectUser({
       name:cookies.get('username'),
-      fullname:cookies.get('fullname'),
+      fullName:cookies.get('fullName'),
       id:cookies.get('userId'),
       phoneNumber:cookies.get('phoneNumber'),
       image:cookies.get('avatarUrl'),
